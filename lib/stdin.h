@@ -26,3 +26,14 @@ vector<vector<int>> read_grid () {
     while (grid.size() != 0 && grid.back().size() == 0) grid.pop_back();
     return grid;
 }
+string readlines () {
+    string buffer;
+    
+    char c; c = cin.get();
+    while (!cin.fail()) {
+        buffer += c;
+        c = cin.get();
+    }
+
+    return buffer;
+}

@@ -70,6 +70,8 @@ class Problem:
 
     def run_solve (self):
         input = self.get_input()
+        with open("input", "wb") as file:
+            file.write(input)
 
         day_string = str(self.__day).rjust(2, "0")
 

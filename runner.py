@@ -9,7 +9,7 @@ def run ():
     manager = Manager.instance()
     manager.credentials = credentials
 
-    problem = Problem(2024, 2)
+    problem = Problem(2024, 3)
     problem.run_solve()
 
 run()
