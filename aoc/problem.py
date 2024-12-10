@@ -56,13 +56,13 @@ class Problem:
     def submit (self, part1: int | None = None, part2: int | None = None):
         number_of_stars = self.number_of_stars()
         print("Current number of stars :", number_of_stars)
-        if part1 is not None and number_of_stars == 0:
+        if part1 is not None and part1 != 0 and number_of_stars == 0:
             print("Attempting part 1 :", part1)
             submit( self.__year, self.__day, 1, part1 )
             number_of_stars = self.number_of_stars()
             print("New number of stars after part 1 :", number_of_stars)
             
-        if part2 is not None and number_of_stars == 1:
+        if part2 is not None and part2 != 0 and number_of_stars == 1:
             print("Attempting part 2 :", part2)
             submit( self.__year, self.__day, 2, part2 )
             number_of_stars = self.number_of_stars()

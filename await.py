@@ -23,5 +23,5 @@ _time = datetime.datetime( year, month, day, *trgs )
 delta = (_time - now).seconds + (_time - now).microseconds / 1_000_000
 
 time.sleep(delta)
-webbrowser.open("https://adventofcode.com/2024/day/5")
+webbrowser.open("https://adventofcode.com/2024/day/9")
 print("TIME IS UP !!!!")
