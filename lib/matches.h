@@ -23,6 +23,11 @@ std::pair<int, int> parse_int (std::string &buffer, int offset, int value = 0) {
     if (offset >= buffer.size()) return { buffer.size(), value };
 
     char c = buffer[offset];
+    if (c == '-') {
+        pair<int, int> e = parse_int(buffer, offset + 1);
+
+        return { e.first, - e.second };
+    }
     if (c < '0' || c > '9') return { offset, value };
     return parse_int(buffer, offset + 1, value * 10 + c - '0');
 }

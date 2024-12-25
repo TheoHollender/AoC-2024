@@ -50,7 +50,7 @@ class Problem:
         self.__day  = day
 
     def get_input (self):
-        return get_input(self.__year, self.__day)
+        return get_input(self.__year, self.__day).strip()
     def number_of_stars (self):
         return num_stars_on(self.__year, self.__day)
     def submit (self, part1: int | None = None, part2: int | None = None):
